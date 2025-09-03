@@ -1,4 +1,5 @@
 #include "compare.h"
+#include "sync.h"
 #include <stdio.h>
 #include <string.h>
 
@@ -19,18 +20,16 @@ int main(int argc, char *argv[]) {
 
   if (strcmp(argv[1], "compare") == 0) {
     if (argc != 4) {
-      print_usage();
+      printf("Error: compare needs 2 files\n");
       return 1;
     }
-
     compare_env(argv[2], argv[3]);
   } else if (strcmp(argv[1], "sync") == 0) {
     if (argc != 4) {
       printf("Error: sync needs 2 files\n");
       return 1;
     }
-
-    // sync_env(argv[2], argv[3]);
+    sync_env(argv[2], argv[3]);
   } else {
     print_usage();
   }
