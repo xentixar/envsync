@@ -1,5 +1,5 @@
-#ifndef ENV_PARSER
-#define ENV_PARSER
+#ifndef PARSER_H
+#define PARSER_H
 
 #define MAX_PAIRS 512
 
